@@ -2,7 +2,7 @@ Here are some release notes I compiled and published for public consumption:
 
 https://github.com/CitrineInformatics/citrine-python/releases/tag/v1.6.0
 
-(Citrine Python)[https://citrineinformatics.github.io/citrine-python/index.html]
+[Citrine Python](https://citrineinformatics.github.io/citrine-python/index.html)
 is an open-source Python library used in materials informatics research.
 To compile the notes, I read the pull requests, JIRA tickets, and
 design docs associated with each commit message entering the release. Whenever
