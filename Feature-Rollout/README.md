@@ -2,12 +2,12 @@
 
 Below are two memos that I wrote announcing a long-awaited feature in an open
 source, publicly available Python SDK that my last company both maintained and
-heavily utilized to deploy certain enterprise integrations. The first memo
+utilized to deploy certain enterprise integrations. The first memo
 describes the feature's arrival and how to use it. The second memo, circulated
 a few sprints later, follows up on additional enhancements.
 
 I edited both passages and their accompanying data to obscure any reference to
-internal procedure or other sensitive knowledge (which would furthermore be
+internal procedure or other sensitive knowledge (which would also be
 obsolete at this point).
 
 ## Rollout
@@ -20,7 +20,7 @@ As you may know, the team and I have been improving the platform to provide more
 detailed error messages during the Machine Learning workflow's CSV data
 validation stage. Think less "this CSV file is invalid; good luck figuring
 out how", and more "in row 4, column 6, you provided a string where a number was
-expected". As of the next release, the Python client will show these specific
+expected." As of the next release, the Python client will show these specific
 troubleshooting messages when the CSV is being read in and uploaded to train
 Predictors.
 
@@ -72,11 +72,11 @@ Multiple columns map to descriptor key 'temperature'
 To fix, change the last descriptor key to `yummy_index`.
 </ul>
 
-During this sprint, the team actually found a descriptor that referred to a
-column that didn't exist in the data, as well as a descriptor key naming
-collision! Luckily, those issues only popped up in internal tests, but if we
-made those mistakes, then there's a chance that a client project out there
-could have the same mistakes. Hence the heads up.
+During this sprint, the team actually found a descriptor referring to a
+column that didn't exist in the data. We also found a descriptor key naming
+collision! Those issues only popped up in internal tests, but if we made
+mistakes, then there's a chance that a client project could have similar
+mistakes -- hence the heads up.
 
 We're aware that CSV data validation also occurs when CSV files are uploaded
 to create Enumerated Design Spaces. We plan to turn on the same specific error
@@ -97,9 +97,6 @@ I hope this was helpful. Please reach out with any questions!
 | 475      | pink      | 375         | delicious   | 1     |
 | 198.6    | purple    | 400         | 289.90      | 2     |
 | 304      | pink      | 425         | scrumptious | 5     |
-
-
-I hope this was helpful; please reach out if you have questions. Thank you!
 
 
 ## Follow-up
@@ -137,7 +134,7 @@ candidates_data_source = CSVDataSource(
 
 design_space = project.design_spaces.register(
     DataSourceDesignSpace(
-        name="Cake Candidate Recipes",
+        name="Dessert Candidate Recipes",
         description="",
         data_source=candidates_data_source,
     )
@@ -154,7 +151,7 @@ what, exactly, went wrong. But starting today, it will output:
 ```
 Status = INVALID                  Elapsed time  =   0s
 Status info:
-["No column named 'Pressure' in 'cake-candidates-demo.csv'",
+["No column named 'Pressure' in 'dessert-candidates.csv'",
  "Multiple columns map to descriptor key 'Cocoa'",
  "File 'dessert-candidates.csv' at row 1, column 'Minutes': '700' is outside "
  'the specified bounds.',
@@ -181,6 +178,7 @@ Please reach out with feedback, questions, and suggestions. Thank you for all
 the amazing work that you do.
 
 Your Humble Colleagues,
+
 AI Engine & Research Team
 
 
