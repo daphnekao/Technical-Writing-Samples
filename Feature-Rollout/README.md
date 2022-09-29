@@ -49,6 +49,7 @@ This will now cause our system to display two errors:
 (1) `ColumnNotFound`
 
 <ul>
+
 ```
 No column named 'pressure' in 'cake.csv'
 ```
@@ -63,6 +64,7 @@ To fix,
 (2) `DuplicateDescriptor`
 
 <ul>
+
 ```
 Multiple columns map to descriptor key 'temperature'
 ```
@@ -101,9 +103,14 @@ I hope this was helpful; please reach out if you have questions. Thank you!
 
 
 ## Follow-up
-Hello, Esteemed Customer Team! As of today's production release, CSV data source
-validations are now activated for when you create Design Spaces, too! These are
-the same validations that appear when you upload a CSV to create a Predictor.
+
+### Message
+
+Hello, Esteemed Customer Team!
+
+As of today's production release, CSV data source validations are now activated
+for when you create Design Spaces, too! These are the same validations that
+appear when you upload a CSV to create a Predictor.
 
 Suppose you are using the attached spreadsheet to enumerate a Design Space of
 dessert recipe candidates to maximize Top Chef scores. You already uploaded it
